@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundSense Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mqtt@4.2.8/dist/mqtt.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dash-header">
+            <h1>SoundSense Dashboard</h1>
+            <div class="dash-controls">
+                <span id="dashConnStatus" class="status-dot disconnected"></span>
+                <span id="dashConnText">Disconnected</span>
+                <a href="/" class="dashboard-link">Mobile App</a>
+            </div>
+        </header>
+
+        <!-- Connection Panel -->
+        <div class="card connection-panel">
+            <h2>MQTT Connection</h2>
+            <div class="conn-form">
+                <div class="form-group">
+                    <label for="dMqttServer">Server</label>
+                    <input type="text" id="dMqttServer" placeholder="mqtt.example.com" />
+                </div>
+                <div class="form-group">
+                    <label for="dMqttPort">Port</label>
+                    <input type="number" id="dMqttPort" value="1883" />
+                </div>
+                <div class="form-group">
+                    <label for="dMqttUser">Username</label>
+                    <input type="text" id="dMqttUser" placeholder="optional" />
+                </div>
+                <div class="form-group">
+                    <label for="dMqttPass">Password</label>
+                    <input type="password" id="dMqttPass" placeholder="optional" />
+                </div>
+                <button class="btn btn-primary" onclick="connectDashboardMQTT()">Connect</button>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-value" id="totalDetections">0</div>
+                <div class="stat-label">Total Detections</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="uniqueDevices">0</div>
+                <div class="stat-label">Unique Devices</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="uniqueSounds">0</div>
+                <div class="stat-label">Sound Types</div>
+            </div>
+        </div>
+
+        <!-- Filter -->
+        <div class="card filter-panel">
+            <div class="filter-row">
+                <div class="form-group">
+                    <label for="filterDevice">Filter by Device</label>
+                    <select id="filterDevice" onchange="applyFilters()">
+                        <option value="">All Devices</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="filterSound">Filter by Sound</label>
+                    <select id="filterSound" onchange="applyFilters()">
+                        <option value="">All Sounds</option>
+                    </select>
+                </div>
+                <button class="btn btn-secondary" onclick="clearFilters()">Clear</button>
+                <button class="btn btn-secondary" onclick="exportCSV()">Export CSV</button>
+            </div>
+        </div>
+
+        <!-- Detections Table -->
+        <div class="card">
+            <h2>Detected Sounds</h2>
+            <div class="table-wrapper">
+                <table id="detectionTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Time</th>
+                            <th>Device</th>
+                            <th>Sound</th>
+                            <th>Confidence</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                            <th>Direction</th>
+                            <th>Tilt</th>
+                        </tr>
+                    </thead>
+                    <tbody id="detectionBody">
+                        <tr>
+                            <td colspan="9" class="no-data">No detections yet. Connect to MQTT broker and wait for data.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Real-time Log -->
+        <div class="card">
+            <h2>Real-time Log</h2>
+            <div id="realtimeLog" class="realtime-log">
+                <p class="muted">Waiting for MQTT messages...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

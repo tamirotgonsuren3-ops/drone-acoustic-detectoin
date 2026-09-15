@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>SoundSense - Sound Detection</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mqtt@4.2.8/dist/mqtt.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>SoundSense</h1>
+            <div class="status-bar">
+                <span id="connStatus" class="status-dot disconnected"></span>
+                <span id="connText">Disconnected</span>
+                <a href="/dashboard" class="dashboard-link">Dashboard</a>
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="register">Register</button>
+            <button class="tab-btn" data-tab="upload">Upload</button>
+            <button class="tab-btn" data-tab="train">Train</button>
+            <button class="tab-btn" data-tab="detect">Detect</button>
+        </nav>
+
+        <!-- Register Tab -->
+        <div id="tab-register" class="tab-content active">
+            <div class="card">
+                <h2>Device Registration</h2>
+                <div class="form-group">
+                    <label for="deviceName">Device Name</label>
+                    <input type="text" id="deviceName" placeholder="e.g. Sensor-01" />
+                </div>
+                <div class="form-group">
+                    <label for="mqttServer">MQTT Server Address</label>
+                    <input type="text" id="mqttServer" placeholder="mqtt.example.com" />
+                </div>
+                <div class="form-group">
+                    <label for="mqttPort">MQTT Port</label>
+                    <input type="number" id="mqttPort" value="1883" />
+                </div>
+                <div class="form-group">
+                    <label for="mqttUser">MQTT Username</label>
+                    <input type="text" id="mqttUser" placeholder="optional" />
+                </div>
+                <div class="form-group">
+                    <label for="mqttPass">MQTT Password</label>
+                    <input type="password" id="mqttPass" placeholder="optional" />
+                </div>
+                <button id="connectBtn" class="btn btn-primary" onclick="connectMQTT()">Connect</button>
+            </div>
+        </div>
+
+        <!-- Upload Tab -->
+        <div id="tab-upload" class="tab-content">
+            <div class="card">
+                <h2>Upload Sound Samples</h2>
+                <p class="info-text">Upload MP3/MP4 files and label the sound type. Filename will be used as label if sound_type is left empty.</p>
+                <div class="form-group">
+                    <label for="soundType">Sound Type Label</label>
+                    <input type="text" id="soundType" placeholder="e.g. dog, drone, car, cow" />
+                </div>
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="audioFile" accept=".mp3,.mp4,.wav,.ogg,.flac,.m4a" hidden />
+                    <div class="upload-icon">+</div>
+                    <p>Tap to select audio file</p>
+                    <p class="small">MP3, MP4, WAV, OGG, FLAC</p>
+                </div>
+                <button id="uploadBtn" class="btn btn-primary" onclick="uploadFile()" disabled>Upload</button>
+                <div id="uploadProgress" class="progress-bar" style="display:none">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div id="uploadResult" class="result-box" style="display:none"></div>
+            </div>
+            <div class="card">
+                <h2>Uploaded Files</h2>
+                <div id="fileList" class="file-list">
+                    <p class="muted">No files uploaded yet</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Train Tab -->
+        <div id="tab-train" class="tab-content">
+            <div class="card">
+                <h2>Train Sound Recognition Model</h2>
+                <p class="info-text">Train a machine learning model on your uploaded sound samples.</p>
+                <div class="form-group">
+                    <label for="epochs">Training Epochs</label>
+                    <input type="number" id="epochs" value="50" min="10" max="200" />
+                </div>
+                <button id="trainBtn" class="btn btn-primary" onclick="trainModel()">Start Training</button>
+                <div id="trainResult" class="result-box" style="display:none"></div>
+                <div id="trainProgress" class="progress-bar" style="display:none">
+                    <div class="progress-fill" id="trainProgressFill"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Model Status</h2>
+                <div id="modelStatus" class="model-status">
+                    <p class="muted">Checking...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detect Tab -->
+        <div id="tab-detect" class="tab-content">
+            <div class="card">
+                <h2>Live Sound Detection</h2>
+                <p class="info-text">Open microphone to detect sounds in real-time. Works in background.</p>
+                <div class="detection-controls">
+                    <button id="micBtn" class="btn btn-large" onclick="toggleMicrophone()">
+                        <span id="micIcon">MIC</span>
+                    </button>
+                    <div id="micStatus" class="mic-status">Microphone off</div>
+                </div>
+                <div id="detectionResult" class="detection-result">
+                    <div class="detection-label">Waiting for detection...</div>
+                </div>
+                <div id="detectionLog" class="detection-log">
+                    <h3>Recent Detections</h3>
+                    <div id="logEntries"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
