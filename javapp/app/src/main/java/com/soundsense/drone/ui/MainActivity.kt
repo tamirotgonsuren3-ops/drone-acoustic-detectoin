@@ -7,7 +7,6 @@ import android.content.ServiceConnection
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.IBinder
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -16,6 +15,7 @@ import androidx.lifecycle.lifecycleScope
 import com.soundsense.drone.audio.AudioDetectionService
 import com.soundsense.drone.databinding.ActivityMainBinding
 import com.soundsense.drone.mqtt.MqttManager
+import com.soundsense.drone.remote.RemoteCommandHandler
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var mqttManager: MqttManager? = null
     private var detectionService: AudioDetectionService? = null
+    private var remoteHandler: RemoteCommandHandler? = null
     private var isBound = false
     private var isListening = false
 
@@ -73,6 +74,8 @@ class MainActivity : AppCompatActivity() {
             startForegroundService(intent)
             bindService(intent, serviceConnection, BIND_AUTO_CREATE)
         }
+
+        startRemoteHandler()
     }
 
     private fun observeMqttState() {
@@ -111,6 +114,27 @@ class MainActivity : AppCompatActivity() {
                     runOnUiThread {
                         binding.lastMessage.text = "[${it.first}] ${it.second.take(100)}"
                     }
+                }
+            }
+        }
+    }
+
+    private fun startRemoteHandler() {
+        val name = (getSharedPreferences("mqtt_config", MODE_PRIVATE)
+            .getString("name", "") ?: "").trim()
+            .ifBlank { "android-sensor" }
+
+        remoteHandler = RemoteCommandHandler(this, mqttManager!!, name)
+        remoteHandler?.onCommandResult = { result ->
+            runOnUiThread {
+                Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        lifecycleScope.launch {
+            mqttManager?.connectionState?.collectLatest { state ->
+                if (state == MqttManager.ConnectionState.CONNECTED) {
+                    remoteHandler?.start()
                 }
             }
         }
@@ -203,12 +227,16 @@ class MainActivity : AppCompatActivity() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             needed.add(Manifest.permission.ACCESS_FINE_LOCATION)
         }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            needed.add(Manifest.permission.CAMERA)
+        }
         if (needed.isNotEmpty()) {
             ActivityCompat.requestPermissions(this, needed.toTypedArray(), PERMISSION_REQUEST)
         }
     }
 
     override fun onDestroy() {
+        remoteHandler?.stop()
         if (isBound) {
             unbindService(serviceConnection)
             isBound = false

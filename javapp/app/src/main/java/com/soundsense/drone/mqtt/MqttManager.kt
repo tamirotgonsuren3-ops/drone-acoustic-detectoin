@@ -25,6 +25,7 @@ class MqttManager(private val context: Context) {
     val lastMessage: StateFlow<Pair<String, String>?> = _lastMessage
 
     var onMessageReceived: ((topic: String, payload: String) -> Unit)? = null
+    private var topicCallbacks = mutableMapOf<String, (topic: String, payload: String) -> Unit>()
 
     enum class ConnectionState {
         DISCONNECTED, CONNECTING, CONNECTED, ERROR
@@ -46,6 +47,9 @@ class MqttManager(private val context: Context) {
                         _connectionState.value = ConnectionState.CONNECTED
                         try {
                             client?.subscribe("detected/sound/#", 1)
+                            topicCallbacks.keys.forEach { topic ->
+                                client?.subscribe(topic, 1)
+                            }
                         } catch (e: MqttException) {
                             Log.e(TAG, "Subscribe error", e)
                         }
@@ -60,9 +64,10 @@ class MqttManager(private val context: Context) {
                         topic ?: return
                         message ?: return
                         val payload = String(message.payload)
-                        Log.d(TAG, "Message on $topic: $payload")
+                        Log.d(TAG, "Message on $topic: ${payload.take(100)}")
                         _lastMessage.value = Pair(topic, payload)
                         onMessageReceived?.invoke(topic, payload)
+                        topicCallbacks[topic]?.invoke(topic, payload)
                     }
 
                     override fun deliveryComplete(token: IMqttDeliveryToken?) {}
@@ -109,6 +114,20 @@ class MqttManager(private val context: Context) {
                 _connectionState.value = ConnectionState.DISCONNECTED
             } catch (e: Exception) {
                 Log.e(TAG, "Disconnect error", e)
+            }
+        }
+    }
+
+    fun subscribe(topic: String, qos: Int = 1, callback: ((topic: String, payload: String) -> Unit)? = null) {
+        callback?.let { topicCallbacks[topic] = it }
+        executor.execute {
+            try {
+                if (client?.isConnected == true) {
+                    client?.subscribe(topic, qos)
+                    Log.d(TAG, "Subscribed to $topic")
+                }
+            } catch (e: MqttException) {
+                Log.e(TAG, "Subscribe error: ${e.message}")
             }
         }
     }

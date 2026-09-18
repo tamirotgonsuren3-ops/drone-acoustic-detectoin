@@ -21,6 +21,9 @@
     <uses-feature
         android:name="android.hardware.microphone"
         android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <permission
         android:name="com.soundsense.drone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"

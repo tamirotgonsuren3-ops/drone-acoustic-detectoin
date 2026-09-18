@@ -104,11 +104,17 @@ ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/m
 	android:name
 		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:13:22-74
 uses-feature#android.hardware.microphone
-ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:15:5-88
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:14:5-88
 	android:required
-		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:15:62-85
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:14:62-85
 	android:name
-		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:15:19-61
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:14:19-61
+uses-feature#android.hardware.camera
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:15:5-85
+	android:required
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:15:58-82
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:15:19-57
 application
 ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:17:5-50:19
 INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:17:5-50:19

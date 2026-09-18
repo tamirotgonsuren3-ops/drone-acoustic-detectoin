@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoundSense Dashboard</title>
+    <title>SoundSense Admin</title>
     <link rel="stylesheet" href="/static/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/mqtt@4.2.8/dist/mqtt.min.js"></script>
+    <style>
+        .device-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-top: 12px; }
+        .device-card { background: #16213e; border-radius: 12px; padding: 16px; border: 2px solid #0f3460; }
+        .device-card.online { border-color: #4caf50; }
+        .device-card.offline { border-color: #555; opacity: 0.6; }
+        .device-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .device-name { font-size: 18px; font-weight: bold; color: #e0e0e0; }
+        .device-status { font-size: 12px; padding: 4px 10px; border-radius: 12px; }
+        .device-status.online { background: #1b5e20; color: #a5d6a7; }
+        .device-status.offline { background: #424242; color: #999; }
+        .device-info { font-size: 13px; color: #90caf9; margin-bottom: 12px; }
+        .device-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+        .btn-sm { padding: 6px 14px; font-size: 13px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; }
+        .btn-mic { background: #e94560; color: white; }
+        .btn-mic.active { background: #ff1744; animation: pulse 1s infinite; }
+        .btn-cam { background: #533483; color: white; }
+        .btn-cam.active { background: #7c4dff; animation: pulse 1s infinite; }
+        .btn-location { background: #0f3460; color: #90caf9; }
+        .btn-locate { background: #1a5276; color: #aed6f1; }
+        @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.6; } }
+        .mic-visualizer { background: #0d1b3e; border-radius: 8px; height: 60px; margin-top: 8px; display: none; position: relative; overflow: hidden; }
+        .mic-visualizer.active { display: block; }
+        .mic-bars { display: flex; align-items: flex-end; justify-content: center; height: 100%; gap: 2px; padding: 4px; }
+        .mic-bar { width: 4px; background: #e94560; border-radius: 2px; transition: height 0.1s; min-height: 2px; }
+        .camera-view { display: none; margin-top: 8px; border-radius: 8px; overflow: hidden; background: #000; max-height: 240px; }
+        .camera-view.active { display: block; }
+        .camera-view img { width: 100%; height: auto; display: block; }
+        .camera-placeholder { color: #555; text-align: center; padding: 40px; font-size: 13px; }
+    </style>
 </head>
 <body>
     <div class="dashboard-container">
         <header class="dash-header">
-            <h1>SoundSense Dashboard</h1>
+            <h1>SoundSense Admin</h1>
             <div class="dash-controls">
                 <span id="dashConnStatus" class="status-dot disconnected"></span>
                 <span id="dashConnText">Disconnected</span>
@@ -24,19 +53,19 @@
             <div class="conn-form">
                 <div class="form-group">
                     <label for="dMqttServer">Server</label>
-                    <input type="text" id="dMqttServer" placeholder="mqtt.example.com" />
+                    <input type="text" id="dMqttServer" placeholder="192.168.x.x" />
                 </div>
                 <div class="form-group">
                     <label for="dMqttPort">Port</label>
-                    <input type="number" id="dMqttPort" value="1883" />
+                    <input type="number" id="dMqttPort" value="9001" />
                 </div>
                 <div class="form-group">
                     <label for="dMqttUser">Username</label>
-                    <input type="text" id="dMqttUser" placeholder="optional" />
+                    <input type="text" id="dMqttUser" value="tamir" />
                 </div>
                 <div class="form-group">
                     <label for="dMqttPass">Password</label>
-                    <input type="password" id="dMqttPass" placeholder="optional" />
+                    <input type="password" id="dMqttPass" value="@ns!bl3" />
                 </div>
                 <button class="btn btn-primary" onclick="connectDashboardMQTT()">Connect</button>
             </div>
@@ -46,16 +75,36 @@
         <div class="stats-row">
             <div class="stat-card">
                 <div class="stat-value" id="totalDetections">0</div>
-                <div class="stat-label">Total Detections</div>
+                <div class="stat-label">Detections</div>
             </div>
             <div class="stat-card">
-                <div class="stat-value" id="uniqueDevices">0</div>
-                <div class="stat-label">Unique Devices</div>
+                <div class="stat-value" id="onlineDevices">0</div>
+                <div class="stat-label">Online Devices</div>
             </div>
             <div class="stat-card">
                 <div class="stat-value" id="uniqueSounds">0</div>
                 <div class="stat-label">Sound Types</div>
             </div>
+        </div>
+
+        <!-- Connected Devices -->
+        <div class="card">
+            <h2>Connected Devices</h2>
+            <div id="deviceGrid" class="device-grid">
+                <p class="muted">No devices connected. Wait for phones to connect to MQTT.</p>
+            </div>
+        </div>
+
+        <!-- Remote Listening Panel -->
+        <div class="card" id="remotePanel" style="display:none">
+            <h2>Remote Listening</h2>
+            <div id="remoteAudioContainer"></div>
+        </div>
+
+        <!-- Remote Camera Panel -->
+        <div class="card" id="cameraPanel" style="display:none">
+            <h2>Remote Camera</h2>
+            <div id="remoteCameraContainer"></div>
         </div>
 
         <!-- Filter -->
@@ -92,13 +141,11 @@
                             <th>Confidence</th>
                             <th>Latitude</th>
                             <th>Longitude</th>
-                            <th>Direction</th>
-                            <th>Tilt</th>
                         </tr>
                     </thead>
                     <tbody id="detectionBody">
                         <tr>
-                            <td colspan="9" class="no-data">No detections yet. Connect to MQTT broker and wait for data.</td>
+                            <td colspan="7" class="no-data">No detections yet.</td>
                         </tr>
                     </tbody>
                 </table>

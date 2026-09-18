@@ -67,7 +67,12 @@ function connectMQTT() {
     }
 
     const clientId = 'soundsense_' + Math.random().toString(16).substr(2, 8);
-    const connectUrl = `wss://${server}:${port}/mqtt`;
+    let connectUrl;
+    if (port === 443 || port === '443' || port === 8884 || port === '8884') {
+        connectUrl = `wss://${server}:${port}/mqtt`;
+    } else {
+        connectUrl = `ws://${server}:${port}/mqtt`;
+    }
 
     try {
         mqttClient = mqtt.connect(connectUrl, {
