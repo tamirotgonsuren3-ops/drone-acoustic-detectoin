@@ -1,3 +1,6 @@
+# Python version 3.10
+conda activate py310
+
 # SoundSense - IoT Sound Detection System
 
 Real-time sound detection system with MQTT integration. Upload sound samples, train ML model, detect sounds from phone microphone, and view all detections on a dashboard.
