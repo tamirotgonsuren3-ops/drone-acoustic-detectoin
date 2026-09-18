@@ -41,4 +41,5 @@ layout activity_dashboard
 layout activity_main
 mipmap ic_launcher
 string app_name
+style DarkEditText
 style Theme.SoundSense

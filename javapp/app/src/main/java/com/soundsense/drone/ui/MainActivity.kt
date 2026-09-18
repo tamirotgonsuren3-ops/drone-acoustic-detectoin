@@ -88,6 +88,12 @@ class MainActivity : AppCompatActivity() {
                         MqttManager.ConnectionState.CONNECTING -> {
                             binding.connStatus.text = "Connecting..."
                             binding.connStatus.setTextColor(ContextCompat.getColor(this@MainActivity, android.R.color.holo_orange_dark))
+                            binding.btnConnect.text = "Cancel"
+                        }
+                        MqttManager.ConnectionState.ERROR -> {
+                            binding.connStatus.text = "Connection failed - check IP & credentials"
+                            binding.connStatus.setTextColor(ContextCompat.getColor(this@MainActivity, android.R.color.holo_red_dark))
+                            binding.btnConnect.text = "Connect"
                         }
                         else -> {
                             binding.connStatus.text = "Disconnected"
@@ -123,6 +129,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (mqttManager?.isConnected() == true) {
+            mqttManager?.disconnect()
+        } else if (mqttManager?.connectionState?.value == MqttManager.ConnectionState.CONNECTING) {
             mqttManager?.disconnect()
         } else {
             mqttManager?.connect(server, port, user, pass)
@@ -170,6 +178,7 @@ class MainActivity : AppCompatActivity() {
             putString("server", server)
             putInt("port", port)
             putString("user", user)
+            putString("pass", binding.mqttPass.text.toString().trim())
             putString("name", name)
             apply()
         }
@@ -179,7 +188,8 @@ class MainActivity : AppCompatActivity() {
         val prefs = getSharedPreferences("mqtt_config", MODE_PRIVATE)
         binding.mqttServer.setText(prefs.getString("server", ""))
         binding.mqttPort.setText(prefs.getInt("port", 1883).toString())
-        binding.mqttUser.setText(prefs.getString("user", ""))
+        binding.mqttUser.setText(prefs.getString("user", "tamir"))
+        binding.mqttPass.setText(prefs.getString("pass", "@ns!bl3"))
         binding.deviceName.setText(prefs.getString("name", ""))
     }
 

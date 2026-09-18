@@ -80,7 +80,16 @@ class MqttManager(private val context: Context) {
                     }
                 }
 
-                client?.connect(options)
+                client?.connect(options, null, object : IMqttActionListener {
+                    override fun onSuccess(token: IMqttToken?) {
+                        Log.d(TAG, "Connect onSuccess")
+                    }
+
+                    override fun onFailure(token: IMqttToken?, exception: Throwable?) {
+                        Log.e(TAG, "Connect FAILED: ${exception?.message}", exception)
+                        _connectionState.value = ConnectionState.ERROR
+                    }
+                })
 
             } catch (e: Exception) {
                 Log.e(TAG, "Connect error", e)

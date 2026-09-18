@@ -59,8 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    app:boxStrokeColor="#0f3460"
-                    app:hintTextColor="#90caf9">
+                    style="@style/DarkEditText">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/deviceName"
@@ -68,6 +67,7 @@
                         android:layout_height="wrap_content"
                         android:hint="Device Name"
                         android:textColor="#e0e0e0"
+                        android:textColorHint="#80a0c0"
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,15 +75,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    app:boxStrokeColor="#0f3460"
-                    app:hintTextColor="#90caf9">
+                    style="@style/DarkEditText">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/mqttServer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="MQTT Server"
+                        android:hint="Server IP"
                         android:textColor="#e0e0e0"
+                        android:textColorHint="#80a0c0"
                         android:inputType="textUri" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,8 +91,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    app:boxStrokeColor="#0f3460"
-                    app:hintTextColor="#90caf9">
+                    style="@style/DarkEditText">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/mqttPort"
@@ -101,6 +100,7 @@
                         android:hint="Port"
                         android:text="1883"
                         android:textColor="#e0e0e0"
+                        android:textColorHint="#80a0c0"
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -108,15 +108,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    app:boxStrokeColor="#0f3460"
-                    app:hintTextColor="#90caf9">
+                    style="@style/DarkEditText">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/mqttUser"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Username (optional)"
+                        android:hint="Username"
                         android:textColor="#e0e0e0"
+                        android:textColorHint="#80a0c0"
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -124,15 +124,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
-                    app:boxStrokeColor="#0f3460"
-                    app:hintTextColor="#90caf9">
+                    style="@style/DarkEditText">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/mqttPass"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Password (optional)"
+                        android:hint="Password"
                         android:textColor="#e0e0e0"
+                        android:textColorHint="#80a0c0"
                         android:inputType="textPassword" />
                 </com.google.android.material.textfield.TextInputLayout>
 

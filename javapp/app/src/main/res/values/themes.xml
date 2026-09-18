@@ -9,5 +9,15 @@
         <item name="android:navigationBarColor">#1a1a2e</item>
         <item name="android:textColorPrimary">#e0e0e0</item>
         <item name="android:textColorSecondary">#a0a0a0</item>
+        <item name="editTextColor">#e0e0e0</item>
+        <item name="android:textColorHighlight">#90caf9</item>
+    </style>
+
+    <style name="DarkEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColor">#e0e0e0</item>
+        <item name="android:textColorHint">#80a0c0</item>
+        <item name="hintTextColor">#90caf9</item>
+        <item name="boxStrokeColor">#0f3460</item>
+        <item name="boxBackgroundColor">#0d1b3e</item>
     </style>
 </resources>

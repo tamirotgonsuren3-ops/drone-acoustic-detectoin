@@ -1,10 +1,14 @@
 [
     {
+        "merged": "/home/bumblebee/.gradle/daemon/8.5/com.soundsense.drone.app-mergeDebugResources-40:/layout/activity_main.xml",
+        "source": "/home/bumblebee/.gradle/daemon/8.5/com.soundsense.drone.app-main-43:/layout/activity_main.xml"
+    },
+    {
         "merged": "com.soundsense.drone.app-mergeDebugResources-40:/layout/activity_main.xml",
         "source": "com.soundsense.drone.app-main-43:/layout/activity_main.xml"
     },
     {
-        "merged": "com.soundsense.drone.app-mergeDebugResources-40:/layout/activity_dashboard.xml",
-        "source": "com.soundsense.drone.app-main-43:/layout/activity_dashboard.xml"
+        "merged": "/home/bumblebee/.gradle/daemon/8.5/com.soundsense.drone.app-mergeDebugResources-40:/layout/activity_dashboard.xml",
+        "source": "/home/bumblebee/.gradle/daemon/8.5/com.soundsense.drone.app-main-43:/layout/activity_dashboard.xml"
     }
 ]
