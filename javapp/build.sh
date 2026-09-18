@@ -2,7 +2,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_DIR="$SCRIPT_DIR/javapp"
+PROJECT_DIR="$SCRIPT_DIR"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -32,45 +32,66 @@ check_prerequisites() {
 }
 
 download_gradle_wrapper() {
-    if [ ! -f "$PROJECT_DIR/gradlew" ]; then
-        log "Setting up Gradle wrapper..."
-        cd "$PROJECT_DIR"
+    cd "$PROJECT_DIR"
 
-        GRADLE_VER="8.5"
-        WRAPPER_JAR="$PROJECT_DIR/gradle/wrapper/gradle-wrapper.jar"
-        WRAPPER_URL="https://services.gradle.org/distributions/gradle-${GRADLE_VER}-bin.zip"
+    GRADLE_VER="8.5"
+    WRAPPER_JAR="$PROJECT_DIR/gradle/wrapper/gradle-wrapper.jar"
+    WRAPPER_URL="https://raw.githubusercontent.com/gradle/gradle/v${GRADLE_VER}.0/gradle/wrapper/gradle-wrapper.jar"
 
-        mkdir -p gradle/wrapper
+    mkdir -p gradle/wrapper
 
-        cat > gradle/wrapper/gradle-wrapper.properties << EOF
+    if [ ! -f "$WRAPPER_JAR" ] || [ ! -s "$WRAPPER_JAR" ]; then
+        log "Downloading gradle-wrapper.jar v${GRADLE_VER}..."
+        if command -v curl &>/dev/null; then
+            curl -fsSL -o "$WRAPPER_JAR" "$WRAPPER_URL" || true
+        elif command -v wget &>/dev/null; then
+            wget -q -O "$WRAPPER_JAR" "$WRAPPER_URL" || true
+        fi
+
+        if [ ! -s "$WRAPPER_JAR" ]; then
+            warn "Direct download failed, trying alternate URL..."
+            ALT_URL="https://github.com/gradle/gradle/raw/v${GRADLE_VER}.0/gradle/wrapper/gradle-wrapper.jar"
+            if command -v curl &>/dev/null; then
+                curl -fsSL -o "$WRAPPER_JAR" "$ALT_URL" || true
+            fi
+        fi
+    fi
+
+    cat > gradle/wrapper/gradle-wrapper.properties << EOF
 distributionBase=GRADLE_USER_HOME
 distributionPath=wrapper/dists
-distributionUrl=${WRAPPER_URL}
+distributionUrl=https\\://services.gradle.org/distributions/gradle-${GRADLE_VER}-bin.zip
 zipStoreBase=GRADLE_USER_HOME
 zipStorePath=wrapper/dists
 EOF
 
-        WRAPPER_SCRIPT="$PROJECT_DIR/gradlew"
-        cat > "$WRAPPER_SCRIPT" << 'WRAPPER'
+    if [ ! -f "$PROJECT_DIR/gradlew" ]; then
+        cat > "$PROJECT_DIR/gradlew" << 'WRAPPER'
 #!/bin/sh
-APP_NAME="Gradle"
+# Gradle wrapper script
 APP_BASE_NAME=$(basename "$0")
-DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
-MAX_FD=maximum
-warn () { echo "$*"; }
-die () { echo "$*"; exit 1; }
-CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
+APP_HOME=$(cd "$(dirname "$0")" && pwd)
+CLASSPATH="$APP_HOME/gradle/wrapper/gradle-wrapper.jar"
 JAVACMD="java"
 if [ -n "$JAVA_HOME" ] ; then
     JAVACMD="$JAVA_HOME/bin/java"
 fi
-exec "$JAVACMD" $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS \
+exec "$JAVACMD" \
+    -Xmx256m \
     "-Dorg.gradle.appname=$APP_BASE_NAME" \
     -classpath "$CLASSPATH" \
     org.gradle.wrapper.GradleWrapperMain "$@"
 WRAPPER
-        chmod +x "$WRAPPER_SCRIPT"
-        log "Gradle wrapper created"
+        chmod +x "$PROJECT_DIR/gradlew"
+    fi
+
+    if [ -s "$WRAPPER_JAR" ]; then
+        log "Gradle wrapper ready (jar: $(du -h "$WRAPPER_JAR" | cut -f1))"
+    else
+        err "Failed to download gradle-wrapper.jar"
+        err "Download manually from: https://services.gradle.org/distributions/gradle-${GRADLE_VER}-bin.zip"
+        err "Or install a newer gradle: https://gradle.org/install/"
+        exit 1
     fi
 }
 
@@ -160,20 +181,27 @@ EOF
 
 setup_android_sdk() {
     if [ -z "${ANDROID_HOME:-}" ] && [ -z "${ANDROID_SDK_ROOT:-}" ]; then
-        warn "ANDROID_HOME not set"
         if [ -d "$HOME/Android/Sdk" ]; then
             export ANDROID_HOME="$HOME/Android/Sdk"
             log "Auto-detected ANDROID_HOME: $ANDROID_HOME"
         elif [ -d "$HOME/android-sdk" ]; then
             export ANDROID_HOME="$HOME/android-sdk"
             log "Auto-detected ANDROID_HOME: $ANDROID_HOME"
+        elif [ -d "/opt/android-sdk" ]; then
+            export ANDROID_HOME="/opt/android-sdk"
+            log "Auto-detected ANDROID_HOME: $ANDROID_HOME"
         else
-            warn "Please set ANDROID_HOME to your Android SDK path"
+            err "Android SDK not found. Install Android Studio or set ANDROID_HOME"
+            exit 1
         fi
     fi
 
-    if [ -n "${ANDROID_HOME:-}" ] && [ -f "$PROJECT_DIR/local.properties" ]; then
+    if [ -n "${ANDROID_HOME:-}" ]; then
         log "Android SDK: $ANDROID_HOME"
+        if [ ! -f "$PROJECT_DIR/local.properties" ]; then
+            echo "sdk.dir=$ANDROID_HOME" > "$PROJECT_DIR/local.properties"
+            log "Created local.properties"
+        fi
     fi
 }
 

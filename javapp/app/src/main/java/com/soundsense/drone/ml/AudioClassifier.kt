@@ -4,8 +4,6 @@ import android.content.Context
 import android.util.Log
 import java.io.DataInputStream
 import java.io.FileInputStream
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
 import kotlin.math.abs
 import kotlin.math.log10
 import kotlin.math.sqrt
@@ -63,17 +61,17 @@ class AudioClassifier(private val context: Context) {
         modelWeights = Array(nLayers - 1) { i ->
             val rows = layerSizes[i]
             val cols = layerSizes[i + 1]
-            Array(rows) { dis.readFloatArray(cols) }
+            Array(rows) { readFloatArray(dis, cols) }
         }
 
         modelBiases = Array(nLayers - 1) { i ->
-            dis.readFloatArray(layerSizes[i + 1])
+            readFloatArray(dis, layerSizes[i + 1])
         }
         dis.close()
     }
 
-    private fun DataInputStream.readFloatArray(size: Int): FloatArray {
-        return FloatArray(size) { readFloat() }
+    private fun readFloatArray(dis: DataInputStream, size: Int): FloatArray {
+        return FloatArray(size) { dis.readFloat() }
     }
 
     fun classify(samples: FloatArray, sampleRate: Int): ClassificationResult? {
@@ -108,16 +106,17 @@ class AudioClassifier(private val context: Context) {
             current = output
         }
 
-        val expSum = current.sumOf { Math.exp(it.toDouble()).toFloat() }
-        val probs = current.map { (Math.exp(it.toDouble()) / expSum).toFloat() }
+        val expValues = current.map { Math.exp(it.toDouble()).toFloat() }
+        val expSum = expValues.sum()
+        val probs = expValues.map { it / expSum }
 
         val maxIdx = probs.indices.maxByOrNull { probs[it] } ?: 0
         val confidence = probs[maxIdx].toDouble()
 
         val allScores = if (labels.size == probs.size) {
-            labels.zip(probs.map { it.toDouble() }).toMap()
+            labels.zip(probs.map { p -> p.toDouble() }).toMap()
         } else {
-            probs.mapIndexed { i, p -> "class_$i" to p.toDouble() }.toMap()
+            probs.mapIndexed { idx, p -> "class_$idx" to p.toDouble() }.toMap()
         }
 
         val label = if (maxIdx < labels.size) labels[maxIdx] else "unknown_$maxIdx"
@@ -130,9 +129,9 @@ class AudioClassifier(private val context: Context) {
         val zcr = zeroCrossing.toFloat() / samples.size
 
         val spectrum = computeSpectrum(samples)
-        val lowEnergy = spectrum.take(spectrum.size / 4).average()
-        val midEnergy = spectrum.drop(spectrum.size / 4).take(spectrum.size / 2).average()
-        val highEnergy = spectrum.drop(3 * spectrum.size / 4).average()
+        val lowEnergy = spectrum.take(spectrum.size / 4).map { it.toDouble() }.average()
+        val midEnergy = spectrum.drop(spectrum.size / 4).take(spectrum.size / 2).map { it.toDouble() }.average()
+        val highEnergy = spectrum.drop(3 * spectrum.size / 4).map { it.toDouble() }.average()
 
         val bassRatio = lowEnergy / (midEnergy + 0.001)
         val trebleRatio = highEnergy / (midEnergy + 0.001)
@@ -158,12 +157,15 @@ class AudioClassifier(private val context: Context) {
         val spectrum = computeSpectrum(samples)
         val melFilters = createMelFilterBank(N_FFT / 2 + 1, 40, sampleRate)
         val melEnergies = FloatArray(40) { i ->
-            melFilters[i].zip(spectrum).sumOf { (f, s) -> f * s }.toFloat().coerceAtLeast(1e-10f)
+            val sum = melFilters[i].zip(spectrum).map { (f, s) -> f * s }.sum()
+            sum.coerceAtLeast(1e-10f)
         }
         return FloatArray(N_MFCC) { k ->
-            (0 until 40).sumOf { i ->
-                melEnergies[i] * kotlin.math.cos(Math.PI * k * (2 * i + 1.0) / (2.0 * 40))
-            }.toFloat()
+            var sum = 0.0
+            for (i in 0 until 40) {
+                sum += melEnergies[i] * Math.cos(Math.PI * k * (2 * i + 1.0) / (2.0 * 40))
+            }
+            sum.toFloat()
         }
     }
 
@@ -181,16 +183,17 @@ class AudioClassifier(private val context: Context) {
             }
         }
         val maxChroma = chroma.maxOrNull() ?: 1f
-        return chroma.map { it / maxChroma }.toFloatArray()
+        return chroma.map { c -> c / maxChroma }.toFloatArray()
     }
 
     private fun computeMel(samples: FloatArray, sampleRate: Int): FloatArray {
         val spectrum = computeSpectrum(samples)
         val melFilters = createMelFilterBank(N_FFT / 2 + 1, 20, sampleRate)
         val melEnergies = FloatArray(20) { i ->
-            melFilters[i].zip(spectrum).sumOf { (f, s) -> f * s }.toFloat().coerceAtLeast(1e-10f)
+            val sum = melFilters[i].zip(spectrum).map { (f, s) -> f * s }.sum()
+            sum.coerceAtLeast(1e-10f)
         }
-        return melEnergies.map { log10(it) }.toFloatArray()
+        return melEnergies.map { e -> log10(e) }.toFloatArray()
     }
 
     private fun computeSpectrum(samples: FloatArray): FloatArray {
@@ -199,21 +202,20 @@ class AudioClassifier(private val context: Context) {
         System.arraycopy(samples, 0, padded, 0, n)
 
         for (i in 0 until n / 2) {
-            val window = 0.54f - 0.46f * kotlin.math.cos(2.0 * Math.PI * i / (n - 1)).toFloat()
+            val window = (0.54 - 0.46 * Math.cos(2.0 * Math.PI * i / (n - 1))).toFloat()
             padded[i] *= window
         }
 
-        val real = padded.copyOf(N_FFT / 2)
-        val imag = FloatArray(N_FFT / 2)
         val spectrum = FloatArray(N_FFT / 2)
 
         for (k in 0 until N_FFT / 2) {
             var re = 0f
             var im = 0f
-            for (n in 0 until minOf(N_FFT, samples.size)) {
-                val angle = 2.0 * Math.PI * k * n / N_FFT
-                re += padded[n] * Math.cos(angle).toFloat()
-                im -= padded[n] * Math.sin(angle).toFloat()
+            val limit = minOf(N_FFT, samples.size)
+            for (j in 0 until limit) {
+                val angle = 2.0 * Math.PI * k * j / N_FFT
+                re += padded[j] * Math.cos(angle).toFloat()
+                im -= padded[j] * Math.sin(angle).toFloat()
             }
             spectrum[k] = sqrt(re * re + im * im) / N_FFT
         }
@@ -224,7 +226,7 @@ class AudioClassifier(private val context: Context) {
     private fun createMelFilterBank(size: Int, nFilters: Int, sampleRate: Int): Array<FloatArray> {
         val lowMel = 0f
         val highMel = (2595 * log10(1 + (sampleRate / 2f) / 700f)).toFloat()
-        val melPoints = Array(nFilters + 2) { i ->
+        val melPoints = FloatArray(nFilters + 2) { i ->
             lowMel + i * (highMel - lowMel) / (nFilters + 1)
         }
         val bins = melPoints.map { mel ->

@@ -152,7 +152,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showDetection(soundType: String, confidence: Double) {
         binding.detectionResult.text = soundType
-        binding.detectionConfidence.text = "${(confidence * 100).toFixed(1)}%"
+        binding.detectionConfidence.text = String.format("%.1f%%", confidence * 100)
         binding.detectStatus.text = "Detected: $soundType (${(confidence * 100).toInt()}%)"
 
         val time = java.text.SimpleDateFormat("HH:mm:ss", java.util.Locale.US).format(java.util.Date())

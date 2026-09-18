@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#e94560</color>
+    <color name="background">#1a1a2e</color>
+    <color name="primary">#0f3460</color>
+    <color name="primary_dark">#16213e</color>
+    <color name="purple">#533483</color>
+    <color name="surface">#16213e</color>
+    <color name="text_primary">#e0e0e0</color>
+    <color name="text_secondary">#a0a0a0</color>
+    <string name="app_name">SoundSense</string>
+    <style name="Theme.SoundSense" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#0f3460</item>
+        <item name="colorPrimaryDark">#16213e</item>
+        <item name="colorAccent">#e94560</item>
+        <item name="android:windowBackground">#1a1a2e</item>
+        <item name="android:statusBarColor">#16213e</item>
+        <item name="android:navigationBarColor">#1a1a2e</item>
+        <item name="android:textColorPrimary">#e0e0e0</item>
+        <item name="android:textColorSecondary">#a0a0a0</item>
+    </style>
+</resources>

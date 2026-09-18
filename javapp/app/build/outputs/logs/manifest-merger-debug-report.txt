@@ -1,0 +1,406 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:2:1-51:12
+MERGED from [androidx.databinding:viewbinding:8.2.2] /home/bumblebee/.gradle/caches/transforms-3/8f390525e2e4603f28d19e96593edcd2/transformed/viewbinding-8.2.2/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.material:material:1.11.0] /home/bumblebee/.gradle/caches/transforms-3/1d4de5b2593a7eb0b2d5a1e569b17f88/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/bumblebee/.gradle/caches/transforms-3/4fbcfd5259c151cce30b8cad647c7d54/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/bumblebee/.gradle/caches/transforms-3/311a4068cb6f00f0b139f155856eec6c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.preference:preference-ktx:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/d4be52b08fba38d79ad9dd6ad5da316b/transformed/preference-ktx-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.preference:preference:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/ddc75050562d2bf715c7de0473b341c4/transformed/preference-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/bumblebee/.gradle/caches/transforms-3/3a18ad1ff86ce211bf5c539bf390734f/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /home/bumblebee/.gradle/caches/transforms-3/d2fbcde40480297879c2e868cd598259/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /home/bumblebee/.gradle/caches/transforms-3/c6fcbcbc6cdcea26c523c1a9ba8a093d/transformed/recyclerview-1.3.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/ff600d7d63e4cc3a75e0ca881cd0ce93/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.fragment:fragment-ktx:1.3.6] /home/bumblebee/.gradle/caches/transforms-3/95fd3cc19c08cfc2b890f88473988214/transformed/fragment-ktx-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] /home/bumblebee/.gradle/caches/transforms-3/9a120dfd33c71d87dc57ad6f62aa800d/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.8.0] /home/bumblebee/.gradle/caches/transforms-3/26808c9884b9aeb47c5d54f3a2213f07/transformed/activity-ktx-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.8.0] /home/bumblebee/.gradle/caches/transforms-3/03fcc665d9b881e6f34d134765854a6c/transformed/activity-1.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/2c493e0f88751805b03a27aa93e29f44/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/6caa47900217eb666404f5f397dc0f4a/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/12db5b304ef63c8a2dee5254fc810a4b/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/024bdf100bc300351523b3be0ecb1407/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/826eabe630453a14a547959aa21f1ffb/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/125c9381c722093a9376589a52807055/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/dbad5170389cd668f1dbe6534f3bd3a3/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/65b2c2d21cd0bd40144797556129edf9/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/a9715836c8553c914f38ed059f6ab053/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/8ac75314509a97bf94bf26a9481d65d2/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.4.1] /home/bumblebee/.gradle/caches/transforms-3/175d856d7c8ec41928b39c2c15a12571/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/f0d84b286c18a2ca087f018252d54a23/transformed/window-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/083e521b44f6514bba935ec55abb258f/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/c660b6dc6a3463d06b67321f3ad00310/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/f31a15b312a3404d452900ff76d108d6/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/2bab073929d038e8d04e1ffe31e34001/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/492bd2d31820546e570ed3f972a65428/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/7d33a910eaac04779d29d49f75d54eab/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6627fc08f2a5b5190efd8ca8137b3b0e/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/f7e84d318a746cc06c5bb13a017d3482/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/c470949c830718823de56a06bacead44/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6adfae340b2bf8bf9bd05709e5f48a6c/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/5756ec2ab082629850437ed69c267b2e/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/f60c8fd0e153867f8d62aac0dba5afa6/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/9aebf5de2db2af94074a51bd7ae53573/transformed/core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/97b09b86e5a52b214683ee72f8d20745/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/67a019c4ab134513227517960b20c38a/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/a6c237874a0ff36c8174f394cff6a945/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/9e3b8c9a3a157a178c2bde1289611433/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/2783121dfdfce77c9b66ff409459243e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/c17e386f2f6ea620cc7dca086c7d6fa6/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/d52b4e34a60bb21d157aebba8182c94a/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/bumblebee/.gradle/caches/transforms-3/b2d547046bc10e49f15fd23dfad1f2ee/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/b7c5a822f46508081a84d1b552787a8b/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/1f49c034dcf42b285cea59e2ed69f6b1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/dab06b45ab2de9e51ef5a790a7b2f966/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+	package
+		INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:5:5-71
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:5:22-68
+uses-permission#android.permission.INTERNET
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:8:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:10:5-77
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:10:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_MICROPHONE
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:11:5-88
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:11:22-85
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:12:5-68
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:12:22-65
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:13:5-77
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:13:22-74
+uses-feature#android.hardware.microphone
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:15:5-88
+	android:required
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:15:62-85
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:15:19-61
+application
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:17:5-50:19
+INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:17:5-50:19
+MERGED from [com.google.android.material:material:1.11.0] /home/bumblebee/.gradle/caches/transforms-3/1d4de5b2593a7eb0b2d5a1e569b17f88/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] /home/bumblebee/.gradle/caches/transforms-3/1d4de5b2593a7eb0b2d5a1e569b17f88/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/bumblebee/.gradle/caches/transforms-3/4fbcfd5259c151cce30b8cad647c7d54/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/bumblebee/.gradle/caches/transforms-3/4fbcfd5259c151cce30b8cad647c7d54/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.window:window:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/f0d84b286c18a2ca087f018252d54a23/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/f0d84b286c18a2ca087f018252d54a23/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6627fc08f2a5b5190efd8ca8137b3b0e/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6627fc08f2a5b5190efd8ca8137b3b0e/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/2783121dfdfce77c9b66ff409459243e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/2783121dfdfce77c9b66ff409459243e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/c17e386f2f6ea620cc7dca086c7d6fa6/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/c17e386f2f6ea620cc7dca086c7d6fa6/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:22:9-35
+	android:label
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:21:9-35
+	tools:targetApi
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:24:9-29
+	android:icon
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:20:9-43
+	android:allowBackup
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:19:9-35
+	android:theme
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:23:9-48
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:18:9-38
+activity#com.soundsense.drone.ui.MainActivity
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:26:9-34:20
+	android:screenOrientation
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:29:13-49
+	android:exported
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:27:13-44
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:30:13-33:29
+action#android.intent.action.MAIN
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:31:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:32:17-77
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:32:27-74
+activity#com.soundsense.drone.ui.DashboardActivity
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:36:9-38:52
+	android:screenOrientation
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:38:13-49
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:37:13-49
+service#com.soundsense.drone.mqtt.MqttService
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:40:9-43:58
+	android:exported
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:42:13-37
+	android:foregroundServiceType
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:43:13-55
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:41:13-45
+service#com.soundsense.drone.audio.AudioDetectionService
+ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:45:9-48:58
+	android:exported
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:47:13-37
+	android:foregroundServiceType
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:48:13-55
+	android:name
+		ADDED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml:46:13-56
+uses-sdk
+INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml
+INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.2.2] /home/bumblebee/.gradle/caches/transforms-3/8f390525e2e4603f28d19e96593edcd2/transformed/viewbinding-8.2.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.2.2] /home/bumblebee/.gradle/caches/transforms-3/8f390525e2e4603f28d19e96593edcd2/transformed/viewbinding-8.2.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.material:material:1.11.0] /home/bumblebee/.gradle/caches/transforms-3/1d4de5b2593a7eb0b2d5a1e569b17f88/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] /home/bumblebee/.gradle/caches/transforms-3/1d4de5b2593a7eb0b2d5a1e569b17f88/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/bumblebee/.gradle/caches/transforms-3/4fbcfd5259c151cce30b8cad647c7d54/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/bumblebee/.gradle/caches/transforms-3/4fbcfd5259c151cce30b8cad647c7d54/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/bumblebee/.gradle/caches/transforms-3/311a4068cb6f00f0b139f155856eec6c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/bumblebee/.gradle/caches/transforms-3/311a4068cb6f00f0b139f155856eec6c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.preference:preference-ktx:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/d4be52b08fba38d79ad9dd6ad5da316b/transformed/preference-ktx-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference-ktx:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/d4be52b08fba38d79ad9dd6ad5da316b/transformed/preference-ktx-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/ddc75050562d2bf715c7de0473b341c4/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/ddc75050562d2bf715c7de0473b341c4/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/bumblebee/.gradle/caches/transforms-3/3a18ad1ff86ce211bf5c539bf390734f/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/bumblebee/.gradle/caches/transforms-3/3a18ad1ff86ce211bf5c539bf390734f/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /home/bumblebee/.gradle/caches/transforms-3/d2fbcde40480297879c2e868cd598259/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /home/bumblebee/.gradle/caches/transforms-3/d2fbcde40480297879c2e868cd598259/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /home/bumblebee/.gradle/caches/transforms-3/c6fcbcbc6cdcea26c523c1a9ba8a093d/transformed/recyclerview-1.3.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /home/bumblebee/.gradle/caches/transforms-3/c6fcbcbc6cdcea26c523c1a9ba8a093d/transformed/recyclerview-1.3.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/ff600d7d63e4cc3a75e0ca881cd0ce93/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/ff600d7d63e4cc3a75e0ca881cd0ce93/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.3.6] /home/bumblebee/.gradle/caches/transforms-3/95fd3cc19c08cfc2b890f88473988214/transformed/fragment-ktx-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.3.6] /home/bumblebee/.gradle/caches/transforms-3/95fd3cc19c08cfc2b890f88473988214/transformed/fragment-ktx-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /home/bumblebee/.gradle/caches/transforms-3/9a120dfd33c71d87dc57ad6f62aa800d/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /home/bumblebee/.gradle/caches/transforms-3/9a120dfd33c71d87dc57ad6f62aa800d/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.8.0] /home/bumblebee/.gradle/caches/transforms-3/26808c9884b9aeb47c5d54f3a2213f07/transformed/activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.0] /home/bumblebee/.gradle/caches/transforms-3/26808c9884b9aeb47c5d54f3a2213f07/transformed/activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.8.0] /home/bumblebee/.gradle/caches/transforms-3/03fcc665d9b881e6f34d134765854a6c/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /home/bumblebee/.gradle/caches/transforms-3/03fcc665d9b881e6f34d134765854a6c/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/2c493e0f88751805b03a27aa93e29f44/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/2c493e0f88751805b03a27aa93e29f44/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/6caa47900217eb666404f5f397dc0f4a/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/6caa47900217eb666404f5f397dc0f4a/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/12db5b304ef63c8a2dee5254fc810a4b/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/12db5b304ef63c8a2dee5254fc810a4b/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/024bdf100bc300351523b3be0ecb1407/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/024bdf100bc300351523b3be0ecb1407/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/826eabe630453a14a547959aa21f1ffb/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/826eabe630453a14a547959aa21f1ffb/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/125c9381c722093a9376589a52807055/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/125c9381c722093a9376589a52807055/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/dbad5170389cd668f1dbe6534f3bd3a3/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/dbad5170389cd668f1dbe6534f3bd3a3/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/65b2c2d21cd0bd40144797556129edf9/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/65b2c2d21cd0bd40144797556129edf9/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/a9715836c8553c914f38ed059f6ab053/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/a9715836c8553c914f38ed059f6ab053/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/8ac75314509a97bf94bf26a9481d65d2/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/bumblebee/.gradle/caches/transforms-3/8ac75314509a97bf94bf26a9481d65d2/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /home/bumblebee/.gradle/caches/transforms-3/175d856d7c8ec41928b39c2c15a12571/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /home/bumblebee/.gradle/caches/transforms-3/175d856d7c8ec41928b39c2c15a12571/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/f0d84b286c18a2ca087f018252d54a23/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/f0d84b286c18a2ca087f018252d54a23/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/083e521b44f6514bba935ec55abb258f/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/083e521b44f6514bba935ec55abb258f/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/c660b6dc6a3463d06b67321f3ad00310/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/c660b6dc6a3463d06b67321f3ad00310/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/f31a15b312a3404d452900ff76d108d6/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/bumblebee/.gradle/caches/transforms-3/f31a15b312a3404d452900ff76d108d6/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/2bab073929d038e8d04e1ffe31e34001/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/2bab073929d038e8d04e1ffe31e34001/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/492bd2d31820546e570ed3f972a65428/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/492bd2d31820546e570ed3f972a65428/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/7d33a910eaac04779d29d49f75d54eab/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/7d33a910eaac04779d29d49f75d54eab/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6627fc08f2a5b5190efd8ca8137b3b0e/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6627fc08f2a5b5190efd8ca8137b3b0e/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/f7e84d318a746cc06c5bb13a017d3482/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/f7e84d318a746cc06c5bb13a017d3482/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/c470949c830718823de56a06bacead44/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/c470949c830718823de56a06bacead44/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6adfae340b2bf8bf9bd05709e5f48a6c/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6adfae340b2bf8bf9bd05709e5f48a6c/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/5756ec2ab082629850437ed69c267b2e/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/5756ec2ab082629850437ed69c267b2e/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/f60c8fd0e153867f8d62aac0dba5afa6/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/f60c8fd0e153867f8d62aac0dba5afa6/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/9aebf5de2db2af94074a51bd7ae53573/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/9aebf5de2db2af94074a51bd7ae53573/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/97b09b86e5a52b214683ee72f8d20745/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/97b09b86e5a52b214683ee72f8d20745/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/67a019c4ab134513227517960b20c38a/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/67a019c4ab134513227517960b20c38a/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/a6c237874a0ff36c8174f394cff6a945/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/a6c237874a0ff36c8174f394cff6a945/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/9e3b8c9a3a157a178c2bde1289611433/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/9e3b8c9a3a157a178c2bde1289611433/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/2783121dfdfce77c9b66ff409459243e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/2783121dfdfce77c9b66ff409459243e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/c17e386f2f6ea620cc7dca086c7d6fa6/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/c17e386f2f6ea620cc7dca086c7d6fa6/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/d52b4e34a60bb21d157aebba8182c94a/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/d52b4e34a60bb21d157aebba8182c94a/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/bumblebee/.gradle/caches/transforms-3/b2d547046bc10e49f15fd23dfad1f2ee/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/bumblebee/.gradle/caches/transforms-3/b2d547046bc10e49f15fd23dfad1f2ee/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/b7c5a822f46508081a84d1b552787a8b/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/b7c5a822f46508081a84d1b552787a8b/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/1f49c034dcf42b285cea59e2ed69f6b1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/1f49c034dcf42b285cea59e2ed69f6b1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/dab06b45ab2de9e51ef5a790a7b2f966/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/dab06b45ab2de9e51ef5a790a7b2f966/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/bumblebee/apps/tamir3/drone-acoustic-detectoin/javapp/app/src/main/AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6627fc08f2a5b5190efd8ca8137b3b0e/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6627fc08f2a5b5190efd8ca8137b3b0e/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/c17e386f2f6ea620cc7dca086c7d6fa6/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/bumblebee/.gradle/caches/transforms-3/c17e386f2f6ea620cc7dca086c7d6fa6/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/bumblebee/.gradle/caches/transforms-3/74c3f6aae965f754f1f8e373bdc20893/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/f0d84b286c18a2ca087f018252d54a23/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/f0d84b286c18a2ca087f018252d54a23/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/f0d84b286c18a2ca087f018252d54a23/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/f0d84b286c18a2ca087f018252d54a23/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/f0d84b286c18a2ca087f018252d54a23/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /home/bumblebee/.gradle/caches/transforms-3/f0d84b286c18a2ca087f018252d54a23/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.soundsense.drone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.soundsense.drone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/bumblebee/.gradle/caches/transforms-3/04312fcc81a1dba854cd5396be05d8ca/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6627fc08f2a5b5190efd8ca8137b3b0e/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6627fc08f2a5b5190efd8ca8137b3b0e/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/bumblebee/.gradle/caches/transforms-3/6627fc08f2a5b5190efd8ca8137b3b0e/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/bumblebee/.gradle/caches/transforms-3/0193a71f29d99aac502129feacf4367b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
